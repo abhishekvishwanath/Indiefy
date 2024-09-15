@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='cart.css') }}">
+    <link rel="icon" href="{{url_for('static',filename='logo-removebg-preview-modified.png')}}" type="image/png">
+
+</head>
+<body>    <header style="background-color: #C89B9B;">
+    <div  class="navbar">
+        <div class="logo">
+            <img id="logo1" src="{{url_for('static',filename='logo-removebg-preview-modified.png')}}" alt="Indiefy Logo" class="logo-img"> <!-- Replace with actual logo path -->
+            <span><b style="color: #78181B;">Indiefy</b></span>
+        </div>
+        <nav>
+            <ul>
+                
+                <li><a href="{{url_for('aboutus')}}" >About Us</a></li>
+                <li><a href="{{url_for('homepage')}}" style="text-decoration: underline;color: #78181B;">Home</a></li>
+               
+                <li><a href="{{url_for('blog')}}">Blog</a></li>
+                <li><a href="{{url_for('index')}}">Shop_now</a></li>
+                <li><a href="{{url_for('contact')}}">Contact Us</a></li><br>
+                
+            </ul>
+        </nav>
+     <div><div id="google_translate_element"></div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'kn,hi,ml,te,as',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script></div>
+    <br><br><br><br><br>
+    <h1 style="margin-left: 10px;">Your Cart</h1><br>
+    <div class="cart-items">
+        {% if cart_items %}
+            <ul>
+                {% for item in cart_items %}
+                <li>
+                    <h2>{{ item.name }}</h2>
+                    <p>Price: ₹{{ item.price }}</p>
+                    <p>Quantity: {{ item.quantity }}</p>
+                    <form action="{{ url_for('remove_from_cart', product_id=item.product_id) }}" method="POST">
+                     
+                    
+                        <button type="submit">Remove</button>
+                    </form>
+                </li>
+                {% endfor %}
+            </ul>
+            <h2>Total Price: ₹{{ total_price }}</h2>
+        {% else %}
+            <p>Your cart is empty.</p>
+        {% endif %}
+    </div>
+    <a href="{{ url_for('index') }}">Back to Products</a>
+    <div class="col-lg-6 d-flex align-items-center image">
+        <div class="text-white px-3 py-4 p-md-4 mx-md-3">
+            <h4 class="mb-3"></h4>
+            <p class="small mb-0"></p>
+        </div>
+    </div>
+    <script src="https://bot.orimon.ai/deploy/index.js" tenantId="c4d47d5f-432e-429b-b88d-697ec7fb6869"></script>
+        
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

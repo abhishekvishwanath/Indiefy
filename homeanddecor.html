@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indiefy - Home Decor</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='homeanddecor.css')}}">
+    <script type="text/javascript" src="{{url_for('static',filename='script.js')}}" defer></script>
+    <link rel="icon" href="{{url_for('static',filename='logo-removebg-preview-modified.png')}}" type="image/png">
+</head>
+
+<body>
+     <!-- Header Section -->
+     <header style="background-color: #C89B9B;">
+        <div  class="navbar">
+            <div class="logo">
+                <img id="logo1" src="{{url_for('static',filename='logo-removebg-preview-modified.png')}}" alt="Indiefy Logo" class="logo-img"> <!-- Replace with actual logo path -->
+                <span><b style="color: #78181B;">Indiefy</b></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="{{url_for('homepage')}}">Shop</a></li>
+                    <li><a href="{{url_for('blog')}}">Blog</a></li>
+                    <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div><div id="google_translate_element"></div>
+
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({
+                        pageLanguage: 'en',
+                        includedLanguages: 'kn,hi,ml,te',
+                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                    }, 'google_translate_element');
+                }
+            </script></div>
+
+
+            <div class="icons">
+                <a href="{{url_for('login')}}" ><i class="fa-solid fa-user"></i></a> <!-- Replace with actual user icon path -->
+                <a href="#" style="margin-left: 20px;"><i class="fa-solid fa-cart-shopping"></i></a> <!-- Replace with actual cart icon path -->
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="hero-section" style="height: 100px;">
+            <h2>Home & Decor</h2>
+        </section>
+
+        <section class="products" >
+            <div class="product-card" style="height: 380px;">
+                <img src="{{url_for('static',filename='vase1.png')}}" style="height: 200px;width: 200px;" alt="Vase" >
+                <h3>Vase</h3>
+                <p>Price: Rs.999</p>
+                <p>Rating: 4.5/5</p>
+                <p>This Beautiful vase made in Madhya Pradesh adds an essence to your home.</p>
+                <button class="shop-now">Shop Now</button>
+            </div>
+            <div class="product-card">
+                <img src="{{url_for('static',filename='jcarpet.jpg')}}" style="height: 200px;width: 200px;" alt="Carpet">
+                <h3>Carpet</h3>
+                <p>Price: Rs.2099</p>
+                <p>Rating: 4.7/5</p>
+                <p>This attractive carpet is from the land of renowned artisans - Rajasthan.</p>
+                <button class="shop-now">Shop Now</button>
+            </div>
+            <div class="product-card">
+                <img src="{{url_for('static',filename='wallplates.png')}}" style="height: 200px;width: 200px;" alt="Wall Plates">
+                <h3>Wall Plates</h3>
+                <p>Price: Rs.5999</p>
+                <p>Rating: 4.5/5</p>
+                <p>Wanna add more color and life to your walls.-Haryana.</p>
+                <button class="shop-now" style="margin-top: 18px;">Shop Now</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Indiefy. All Rights Reserved.</p>
+    </footer>
+
+    <script type="text/javascript" src="{{url_for('static',filename='home.js')}}"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="https://bot.orimon.ai/deploy/index.js" tenantId="c4d47d5f-432e-429b-b88d-697ec7fb6869"></script>
+        
+</body>
+
+</html>

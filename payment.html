@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='payment.css')}}">
+    <link rel="icon" href="{{url_for('static',filename='logo-removebg-preview-modified.png')}}" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <h1>Product Payment</h1>
+
+        <div class="product-info">
+            <label class="label">Product ID:</label>
+            <span>{{ product.id }}</span>
+        </div>
+
+        <div class="product-info">
+            <label class="label">Product Name:</label>
+            <span>{{ product.name }}</span>
+        </div>
+
+        <div class="product-info">
+            <label class="label">Price:</label>
+            <span class="price">{{ product.price }} USD</span>
+        </div>
+        
+        <div class="image-container">
+            <label class="label">Product Image:</label><br>
+            <img src="{{ url_for('static', filename=product.image_path) }}" alt="Product Image">
+        </div>
+        
+        <div class="image-container">
+            <label class="label">Scan to Pay (QR Code):</label><br>
+            <img src="{{ url_for('static', filename=product.qr_code_path) }}" alt="QR Code">
+        </div>
+    
+
+        <div>
+            <button class="button">Make Payment</button>
+        </div>
+    </div>
+</body>
+</html>

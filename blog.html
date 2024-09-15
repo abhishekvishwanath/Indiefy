@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indiefy Blog</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='blog.css')}}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   
+    <link rel="icon" href="{{url_for('static',filename='logo-removebg-preview-modified.png')}}" type="image/png">
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+ <!-- Header Section -->
+ <header style="background-color: #C89B9B;">
+    <div  class="navbar">
+        <div class="logo">
+            <img id="logo1" src="{{url_for('static',filename='logo-removebg-preview-modified.png')}}" alt="Indiefy Logo" class="logo-img"> <!-- Replace with actual logo path -->
+            <span><b style="color: #78181B;">Indiefy</b></span>
+        </div>
+        <nav>
+            <ul>
+                
+                <li><a href="{{url_for('aboutus')}}" >About Us</a></li>
+                <li><a href="{{url_for('homepage')}}">Shop</a></li>
+               
+                <li><a href="{{url_for('blog')}}" style="text-decoration: underline;color: #78181B;">Blog</a></li>
+                <li><a href="{{url_for('index')}}">Shop_now</a></li>
+                <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+                
+            </ul>
+        </nav>
+        <div><div id="google_translate_element"></div>
+
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    includedLanguages: 'kn,hi',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                }, 'google_translate_element');
+            }
+        </script></div>
+        <div class="icons">
+            <a href="{{url_for('login')}}" ><i class="fa-solid fa-user" class="icons"></i></a> <!-- Replace with actual user icon path -->
+            <a href="{{url_for('cart')}}" style="margin-left: 20px;"><i class="fa-solid fa-cart-shopping"></i></a> <!-- Replace with actual cart icon path -->
+        </div>
+    </div>
+</header>
+
+    <section class="banner">
+        <div class="banner-text">
+            <h1>BLOG</h1>
+        </div>
+    </section>
+
+    <section class="intro">
+        <p>Welcome to our blog page, where we celebrate the extraordinary craftsmanship of India’s artisans and spotlight the NGOs that empower them. Here, you’ll discover inspiring stories of talented artisans, explore the cultural heritage behind their crafts, and learn how NGOs collaborate to bring these local traditions to global markets...</p>
+        <p>Join us on this journey to appreciate and support India's rich artisanal legacy!</p>
+    </section>
+
+    <section class="blog-posts">
+        <div class="post">
+            <img src="{{url_for('static',filename='aunty2.jpeg')}}" alt="Artisan Story 1">
+            <h2>Corona changed our course and life..</h2>
+            <p>Meena kumari, a local painter near kadirenahalli cross,Bengaluru, says that the times after covid pandemic are not the same as before.
+                The sales remain seasonal, attracting many mostly during any festivals. The price they quote would be forsay Rs.1000, but people bargain and end up paying Rs.500-600 only.
+                She wishes to expand their business and has the liking to sell her products online but has never been approached by any group or supporters. She feels any person like her must be given the opportunity to show their work and talent which deserves a right price.</p>
+            
+        </div>
+        <div class="post">
+            <img src="{{url_for('static',filename='aunty1.jpeg')}}" alt="Artisan Story 2">
+            <h2>We had to move from Gujarat to gain profits..</h2>
+            <p>Lata , a local painter near kadirenahalli cross , Bengaluru, shares with us the journey of her shop.
+                She was enthusiastic to say that they are from a village in Gujarat which is 10km from that of our prime minister Narendra Modi ji.
+                The whole family  had to move to  bengaluru as  the product prize range was comparitivelly less back there and earning a livelihood through their work was not compensating with their expenditure on making it..</p>
+           
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>&copy; 2024 Indiefy. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://bot.orimon.ai/deploy/index.js" tenantId="c4d47d5f-432e-429b-b88d-697ec7fb6869"></script>
+        
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indiefy - Rajasthan Collection</title>
+
+    <!-- Font Awesome CSS for Icons -->
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="icon" href="{{url_for('static',filename='logo-removebg-preview-modified.png')}}" type="image/png">
+
+    <link rel="stylesheet" href="{{url_for('static',filename='rajasthan.css')}}">
+</head>
+
+<body>
+    <header style="background-color: #C89B9B;">
+        <div  class="navbar">
+            <div class="logo">
+                <img id="logo1" src="{{url_for('static',filename='logo-removebg-preview-modified.png')}}" alt="Indiefy Logo" class="logo-img"> <!-- Replace with actual logo path -->
+                <span><b style="color: #78181B;">Indiefy</b></span>
+            </div>
+            <nav>
+                <ul>
+                    
+                    <li><a href="{{url_for('aboutus')}}" >About Us</a></li>
+                    <li><a href="{{url_for('homepage')}}">Home</a></li>
+                   
+                    <li><a href="{{url_for('blog')}}">Blog</a></li>
+                    <li><a href="{{url_for('index')}}">Shop_now</a></li>
+                    <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+                    
+                </ul>
+            </nav>
+            <div></div>
+                <div id="google_translate_element"></div>
+
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({
+                        pageLanguage: 'en',
+                        includedLanguages: 'kn,hi,ml,te,as',
+                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                    }, 'google_translate_element');
+                }
+            </script></div>
+            <div class="icons">
+                <aa href="{{url_for('login')}}" ><i class="fa-solid fa-user"></i></a> 
+                    <a href="{{url_for('cart')}}" style="margin-left: 20px;"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1><span class="rajasthan-text">Rajasthan</span></h1>
+                <p>Rajasthan, the land of royalty, is renowned for its opulent cultural heritage and artisanal craftsmanship. The state's rich traditions are reflected in its vibrant hand-block printed textiles, intricate blue pottery, and the iconic Meenakari jewelry. Rajasthan's artisans have perfected these crafts over generations, creating pieces that embody the state's regal history and artistic excellence. Our platform offers you a gateway to these exquisite creations, allowing you to bring a piece of Rajasthan’s timeless elegance and cultural richness into your life. Explore the artistry that makes Rajasthan a jewel of India</p>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="product-card">
+                <img src="{{url_for('static',filename='jpot.jpg')}}" alt="Blue Pottery">
+                <h3>Blue Pottery</h3>
+                <p>Price: Rs. 499</p>
+                <p>Rating: 4.6/5</p>
+                <p>Beautiful handcrafted blue pottery from Rajasthan.</p>
+                <button class="shop-now">Shop Now</button>
+            </div>
+            <div class="product-card">
+                <img src="{{url_for('static',filename='jpaint.jpg')}}" alt="Nathdwara Painting">
+                <h3>Nathdwara Painting</h3>
+                <p>Price: Rs. 5,410</p>
+                <p>Rating: 4.7/5</p>
+                <p>Famous for its Pichwai paintings, depicting Lord Krishna.</p>
+                <button class="shop-now">Shop Now</button>
+            </div>
+            <div class="product-card">
+                <img src="{{url_for('static',filename='jcarpet.jpg')}}" alt="Dhurrie Carpet">
+                <h3>Dhurrie Carpet</h3>
+                <p>Price: Rs. 7,110</p>
+                <p>Rating: 4.5/5</p>
+                <p>Traditional flat-woven carpets from Rajasthan.</p>
+                <button class="shop-now">Shop Now</button>
+            </div>
+            <div class="product-card">
+                <img src="{{url_for('static',filename='jshoe.png')}}" alt="Maroon Sandals">
+                <h3>Handmade Embroidered Maroon Sandals</h3>
+                <p>Price: Rs. 3,110</p>
+                <p>Rating: 4.1/5</p>
+                <p>Beautiful handcrafted sandals from Rajasthan.</p>
+                <button class="shop-now">Shop Now</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Indiefy. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    
+    <script src="https://bot.orimon.ai/deploy/index.js" tenantId="c4d47d5f-432e-429b-b88d-697ec7fb6869"></script>
+        
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>

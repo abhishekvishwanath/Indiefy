@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="icon" href="{{url_for('static',filename='logo-removebg-preview-modified.png')}}" type="image/png">
+
+</head>
+<body> 
+    <header style="background-color: #C89B9B;">
+        <div  class="navbar">
+            <div class="logo">
+                <img id="logo1" src="{{url_for('static',filename='logo-removebg-preview-modified.png')}}" alt="Indiefy Logo" class="logo-img"> <!-- Replace with actual logo path -->
+                <span><b style="color: #78181B;">Indiefy</b></span>
+            </div>
+            <nav>
+                <ul>
+                    
+                    <li><a href="{{url_for('aboutus')}}" >About Us</a></li>
+                    <li><a href="{{url_for('homepage')}}" >Home</a></li>
+                   
+                    <li><a href="{{url_for('blog')}}">Blog</a></li>
+                    <li><a href="{{url_for('index')}}" style="text-decoration: underline;color: #78181B;">Shop_now</a></li>
+                    <li><a href="{{url_for('contact')}}">Contact Us</a></li><br>
+                    
+                </ul>
+            </nav>
+    <div><div id="google_translate_element"></div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'kn,hi,ml,te,as',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script></div><br>
+    <h1>Products</h1>
+    <div class="product-list">
+        {% for product in products %}
+        <div class="product-item">
+            <img src="{{ url_for('static', filename='uploads/' ~ product.image) }}" alt="{{ product.name }}">
+            <h2>{{ product.name }}</h2>
+            <p>Price: ₹{{ product.price }}</p>
+            <form action="{{ url_for('add_to_cart', product_id=product.product_id) }}" method="POST">
+                <input type="number" name="quantity" value="1" min="1" max="10">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+    <button>
+        <a href="{{ url_for('cart') }}" class="button-link">Go to Cart</a>
+    </button>
+
+    <script src="https://bot.orimon.ai/deploy/index.js" tenantId="c4d47d5f-432e-429b-b88d-697ec7fb6869"></script>
+        
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+</body>
+</html>

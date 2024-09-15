@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indiefy - Go Desi</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='home.css')}}">
+    <link rel="icon" href="{{url_for('static',filename='logo-removebg-preview-modified.png')}}" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="icon" href="{{url_for('static',filename='logo-removebg-preview-modified.png')}}" type="image/png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="font-family: Aclonica;">
+    <!-- Header Section -->
+    <header style="background-color: #C89B9B;">
+        <div  class="navbar">
+            <div class="logo">
+                <img id="logo1" src="{{url_for('static',filename='logo-removebg-preview-modified.png')}}" alt="Indiefy Logo" class="logo-img"> <!-- Replace with actual logo path -->
+                <span><b style="color: #78181B;">Indiefy</b></span>
+            </div>
+            <nav>
+                <ul>
+                    
+                    <li><a href="{{url_for('aboutus')}}" >About Us</a></li>
+                    <li><a href="{{url_for('homepage')}}" style="text-decoration: underline;color: #78181B;">Home</a></li>
+                   
+                    <li><a href="{{url_for('blog')}}">Blog</a></li>
+                    <li><a href="{{url_for('index')}}">Shop_now</a></li>
+                    <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+                    
+                </ul>
+            </nav>
+            <div>
+                <div id="google_translate_element"></div>
+
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({
+                        pageLanguage: 'en',
+                        includedLanguages: 'kn,hi,ml,te,as',
+                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                    }, 'google_translate_element');
+                }
+            </script></div>
+            <div class="icons">
+                <a href="{{url_for('login')}}" ><i class="fa-solid fa-user"></i></a> 
+                <a href="{{url_for('cart')}}" style="margin-left: 20px;"><i class="fa-solid fa-cart-shopping"></i></a> <!-- Replace with actual cart icon path -->
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <div class="hero-section">
+            <div class="hero-image">
+                <img src="{{url_for('static',filename='bg.jpg')}}" style="background-size: cover;" alt="Handcrafted Elephant Art"> <!-- Replace with actual hero image path -->
+            </div>
+            <div class="hero-text">
+                <h1><strong>Indiefy - Go Desi</strong> </h1>
+                <h2>Explore timeless crafts and artifacts of our India</h2>
+                <p>Indiefy is dedicated to celebrating and preserving India's rich cultural heritage through the promotion of local artisans. We connect you with handcrafted products that tell the story of our nation’s traditions, supporting artisans in sustaining their crafts. Explore our curated selection to discover unique pieces that reflect the heart and soul of India, and join us in keeping the spirit of Indian craftsmanship alive.</p>
+               
+               <a href="{{url_for('state')}}"> <button class="browse-btn">Browse Products</button></a>
+            </div>
+        </div>
+    </main>
+
+     
+    
+    <main>
+        <!-- Featured Categories Section -->
+        <section class="featured-categories" aria-labelledby="featured-categories-heading">
+            <h2 id="featured-categories-heading">Featured Categories</h2>
+            <div class="categories-container">
+                <article class="category" aria-label="Handicrafts category">
+                    <img class="imga" src="{{url_for('static',filename='pots.png')}}" alt="Handmade crafts and intricate designs">
+                    <h3>Handicrafts</h3>
+                    <p>Discover handmade crafts and intricate designs from artisans across India.</p>
+                </article>
+                <article class="category" aria-label="Jewelry category">
+                    <img class="imga" src="{{url_for('static',filename='jewelry.jpg')}}" alt="Traditional and contemporary jewelry">
+                    <h3>Jewelry</h3>
+                    <p>Explore our collection of traditional and contemporary jewelry.</p>
+                </article>
+                <article class="category" aria-label="Home and Decor category">
+                    <a href="{{url_for('homeanddecor')}}"><img class="imga" src="{{url_for('static',filename='homedecor.jpg')}}" alt="Home decor items including lamps and wall art">
+                    </a><h3>Home & Decor</h3>
+                    <p>Beautifully crafted items to decorate your home with a touch of Indian culture.</p>
+                </article>
+                <article class="category" aria-label="Handloom category">
+                    <img class="imga" src="{{url_for('static',filename='handloom.jpg')}}" alt="Home decor items including lamps and wall art">
+                    <h3>Handloom</h3>
+                    <p>Discover vibrant handloom textiles woven with traditional techniques</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Our Treasures Section -->
+        <section class="featured-categories" aria-labelledby="featured-categories-heading">
+            <h2 id="featured-categories-heading">Our Treasures</h2>
+            <div class="categories-container">
+                <article class="category" aria-label="Handicrafts category">
+                    <a href="{{url_for('banarasisaree')}}"><img class="imga" src="{{url_for('static',filename='mys.jpg')}}" alt="Handmade crafts and intricate designs"></a>
+                    <h3>Bandhnai Saree</h3>
+                    <p style="padding-top: 5px;">Category: Saree</p>
+                    <p style="padding-top: 5px;">Price: 2,500</p>
+                                    </article>
+                <article class="category" aria-label="Jewelry category">
+                    <img class="imga" src="{{url_for('static',filename='madhubani.png')}}" alt="Traditional and contemporary jewelry">
+                    <h3>Madhubani Art</h3>
+                    <p style="padding-top: 5px;">Category: Paintings</p>
+                    <p style="padding-top: 5px;">Price: 1200</p>
+                </article>
+                <article class="category" aria-label="Home and Decor category">
+                    <a href="#"><img class="imga" src="{{url_for('static',filename='brass.png')}}" alt="Home decor items including lamps and wall art">
+                    </a><h3>Brass Diya</h3>
+                    <p style="padding-top: 5px;">Category: Decor</p>
+                    <p style="padding-top: 5px;">Price: 750</p>
+                </article>
+                <article class="category" aria-label="Handloom category">
+                    <img class="imga" src="{{url_for('static',filename='shawl.png')}}" alt="Home decor items including lamps and wall art">
+                    <h3>Pashmina Shawl</h3>
+                    <p style="padding-top: 5px;">Category: Shawls</p>
+                    <p style="padding-top: 5px;">Price: 3,500</p>
+                </article>
+            </div>
+        </section>
+        <section class="featured-categories" aria-labelledby="featured-categories-heading">
+            
+            <div class="categories-container">
+                <article class="category" aria-label="Handicrafts category">
+                    <img class="imga" src="{{url_for('static',filename='mysore.png')}}" alt="Handmade crafts and intricate designs">
+                    <h3>Mysore Silk</h3>
+                    <p style="padding-top: 5px;">Category: Saree</p>
+                    <p style="padding-top: 5px;">Price: 5,000</p>
+                </article>
+                <article class="category" aria-label="Jewelry category">
+                    <img class="imga" src="{{url_for('static',filename='handbag.png')}}" alt="Traditional and contemporary jewelry">
+                    <h3>Kutch Handbag</h3>
+                    <p style="padding-top: 5px;">Category: Accessories</p>
+                    <p style="padding-top: 5px;">Price: 1,100</p>
+                </article>
+                <article class="category" aria-label="Home and Decor category">
+                    <a href="#"><img class="imga" src="{{url_for('static',filename='woodene.png')}}" alt="Home decor items including lamps and wall art">
+                    </a><h3>Wooden Elephant</h3>
+                    <p style="padding-top: 5px;">Category: Sculptures</p>
+                    <p style="padding-top: 5px;">Price: 850</p>
+                </article>
+                <article class="category" aria-label="Handloom category">
+                    <img class="imga" src="{{url_for('static',filename='kolhapuri.png')}}" alt="Home decor items including lamps and wall art">
+                    <h3>Kolhapuri Chappals</h3>
+                    <p style="padding-top: 5px;">Category: Footwear</p>
+                    <p style="padding-top: 5px;">Price: 950</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Join Our Community Section -->
+        <section class="join-community" aria-labelledby="join-community-heading">
+            <h2 id="join-community-heading">Join Our Community</h2>
+            <p>Show your support. Get in touch!</p>
+            <a href="{{url_for('login')}}"><button class="browse-btn" style="margin-top: 10px;">Subscribe</button></a>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <body>
+        <footer>
+            <div class="f-item-con">
+                <div class="app-info">
+                    <span class='app-name'>
+                        <span class='app-initial'>I</span>NDEIFY
+                    </span>
+                    <p>We provides you with <strong>Well designed</strong> and <strong>Cultural rich Handicrafts.</strong></p>
+                </div>
+                <div class="useful-links">
+                    <div class="footer-title" style="color: white;">Useful Links</div>
+                    <ul>
+                        
+                        <a href="{{url_for('login')}}"><li>Sign In</li></a>
+                        <li><a href="{{url_for('homepage')}}">About Us</li></a></li>
+                        
+                        
+                        <li>Terms and Conditions</li>
+                    </ul>
+                </div>
+                <div class="help-sec">
+                    <div class="footer-title">Help</div>
+                    <ul>
+                        <li> <a href="{{url_for('homepage')}}">Help Me</a></li>
+                        <a href="{{url_for('contact')}}"><li>Feedback</li></a>
+                        <li>Report a Issue / Bug</li>
+                    </ul>
+                </div>
+                <div class="g-i-t">
+                    <div class="footer-title">Get in Touch</div>
+                    <form action="/" method="post" class="space-y-2">
+                        <input type="text" name="g-name" class="g-inp" id="g-name" style="color: black;" placeholder='Name' />
+                        <input type="email" name="g-email" class="g-inp" id="g-email"  style="color: black;" placeholder='Email' />
+                        <textarea type="text" name="g-msg" class="g-inp h-40 resize-none"  style="color: black;" id="g-msg"
+                            placeholder='Message...'></textarea>
+                        <button type="submit" class='f-btn'>Submit</button>
+                    </form>
+                </div>
+            </div>
+            <footer class="text-center text-white" style="background-color: #EACBCB;text-align: center;">
+                <p><h6>Our social media handles</h6></p>
+                <!-- Grid container -->
+                <div class="container pt-4">
+                  <!-- Section: Social media -->
+                  <section class="mb-4">
+                    <!-- Facebook -->
+                    <a
+                      data-mdb-ripple-init class="soclogo"
+                      href="#!"
+                      role="button"
+                      data-mdb-ripple-color="dark"
+                      style="color: #78181B;"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+              
+                    <!-- Twitter -->
+                    <a
+                      data-mdb-ripple-init class="soclogo"
+                      href="#!"
+                      role="button"
+                      style="color: #78181B;"
+                      data-mdb-ripple-color="dark"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+              
+                    <!-- Google -->
+                    <a
+                      data-mdb-ripple-init class="soclogo"
+                      href="#!"
+                      role="button"
+                      style="color: #78181B;"
+                      data-mdb-ripple-color="dark"
+                      ><i class="fab fa-google"></i
+                    ></a>
+              
+                    <!-- Instagram -->
+                    <a
+                      data-mdb-ripple-init class="soclogo"
+                      href="#!"
+                      role="button"
+                      style="color: #78181B;"
+                      data-mdb-ripple-color="dark"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+              
+                    <!-- Linkedin -->
+                    <a
+                      data-mdb-ripple-init class="soclogo"
+                      href="#!"
+                      role="button"
+                      data-mdb-ripple-color="dark"
+                      style="color: #78181B;"
+                      ><i class="fab fa-linkedin"></i
+                    ></a>
+                    <!-- Github -->
+                    <a
+                      data-mdb-ripple-init class="soclogo"
+                      href="#!"
+                      role="button"
+                      data-mdb-ripple-color="dark"
+                      style="color: #78181B;"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                  </section>
+                  <!-- Section: Social media -->
+                </div>
+                <!-- Grid container -->
+              
+               
+              </footer>
+            <div class='cr-con'>Copyright &copy; 2024 | Made by ROOTERS</div>
+            
+        </footer>
+        <script src="https://bot.orimon.ai/deploy/index.js" tenantId="c4d47d5f-432e-429b-b88d-697ec7fb6869"></script>
+        
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </body>

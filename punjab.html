@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indiefy - Rajasthan Collection</title>
+
+    <!-- Font Awesome CSS for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='punjab.css')}}">
+</head>
+
+<body>
+    <header style="background-color: #C89B9B;">
+        <div  class="navbar">
+            <div class="logo">
+                <img id="logo1" src="{{url_for('static',filename='logo-removebg-preview-modified.png')}}" style="height: 30px;width: 30px;" alt="Indiefy Logo" class="logo-img"> <!-- Replace with actual logo path -->
+                <span><b style="color: #78181B;">Indiefy</b></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="{{url_for('homepage')}}">Shop</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <a href="{{url_for('login')}}" ><i class="fa-solid fa-user"></i></a> <!-- Replace with actual user icon path -->
+                <a href="#" style="margin-left: 20px;"><i class="fa-solid fa-cart-shopping"></i></a> <!-- Replace with actual cart icon path -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1><span class="rajasthan-text">Punjab</span></h1>
+                <p>Punjab's heritage is a rich tapestry of cultural and historical traditions, reflecting a blend of vibrant art, music, and spirituality. Renowned for its agricultural abundance, Punjab's heritage includes distinctive products</p>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="product-card">
+                <img src="{{url_for('static',filename='punjab1.jpg')}}" alt="Blue Pottery">
+                <h3>Phulkari</h3>
+                <p>Price: Rs. 1,399</p>
+                <p>Rating: 4.6/5</p>
+                <p>Phulkari means 'floral work', the designs include not only flowers but also cover and geometrical shapes.</p>
+                <button class="shop-now">Shop Now</button>
+            </div>
+            <div class="product-card">
+                <img src="{{url_for('static',filename='jutti.jpg')}}" alt="Nathdwara Painting">
+                <h3>Jutti</h3>
+                <p>Price: Rs. 1,649</p>
+                <p>Rating: 4.3/5</p>
+                <p>Nothing completes a festive ensemble like a pair of hand embroided jutties.</p>
+                <button class="shop-now">Shop Now</button>
+            </div>
+            <div class="product-card">
+                <img src="{{url_for('static',filename='punjab2.jpg')}}" alt="Dhurrie Carpet">
+                <h3>Pooja Thali</h3>
+                <p>Price: Rs. 3,110</p>
+                <p>Rating: 4.7/5</p>
+                <p>This special pooja thali in pure brass with Meens work will add elegance to your interiors and will be equally praised if gifetd to your known.</p>
+                <button class="shop-now">Shop Now</button>
+            </div>
+            <div class="product-card">
+                <img src="{{url_for('static',filename='punjab3.jpg')}}" alt="Maroon Sandals">
+                <h3>Kundan necklace</h3>
+                <p>Price: Rs. 6,410</p>
+                <p>Rating: 4.6/5</p>
+                <p>Beaded Heavy Kundan Necklace for any party you wish to attend, this kundan necklace set can be your stylish and unique statement piece.</p>
+                <button class="shop-now">Shop Now</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Indiefy. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type='text/javascript' src="{{url_for('static',filename='script.js')}}"></script>
+</body>
+
+</html>

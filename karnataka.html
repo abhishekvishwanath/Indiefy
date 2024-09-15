@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indiefy - Karnataka</title>
+
+    <!-- Font Awesome CSS for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="{{url_for('static',filename='logo-removebg-preview-modified.png')}}" type="image/png">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='karnataka.css')}}">
+</head>
+
+<body>
+    <header style="background-color: #C89B9B;">
+        <div  class="navbar">
+            <div class="logo">
+                <img id="logo1" src="{{url_for('static',filename='logo-removebg-preview-modified.png')}}" style="width: 30px;height: 30px;" alt="Indiefy Logo" class="logo-img"> <!-- Replace with actual logo path -->
+                <span><b style="color: #78181B;">Indiefy</b></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="{{url_for('homepage')}}">Shop</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div><div id="google_translate_element"></div>
+
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({
+                        pageLanguage: 'en',
+                        includedLanguages: 'kn,hi,ml,te',
+                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                    }, 'google_translate_element');
+                }
+            </script></div>
+            <div class="icons">
+                <a href="{{url_for('login')}}" ><i class="fa-solid fa-user"></i></a> <!-- Replace with actual user icon path -->
+                <a href="#" style="margin-left: 20px;"><i class="fa-solid fa-cart-shopping"></i></a> <!-- Replace with actual cart icon path -->
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1><span class="rajasthan-text">Karnataka</span></h1>
+                <p>Karnataka is a treasure trove of cultural heritage, offering an array of exquisite handcrafted products that reflect its rich traditions. From the luxurious Mysore silk sarees, known for their intricate weaves and vibrant colors, to the aromatic sandalwood carvings and delicate Bidriware, Karnataka's artisans create masterpieces that are steeped in history and craftsmanship. Our platform brings these timeless creations to you, allowing you to experience the essence of Karnataka’s cultural legacy from the comfort of your home. Explore and celebrate the unique artistry that defines this remarkable state.</p>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="product-card">
+                <img src="{{url_for('static',filename='mys.jpg')}}" alt="Blue Pottery">
+                <h3>Mysore Silk Saree</h3>
+                <p>Price: Rs. 13,110</p>
+                <p>Rating: 4.5/5</p>
+                <p>Msore Silk is one of the most luxurious silk fabrics,known for its elegance, rich texture and vibrant colours.</p>
+                <button class="shop-now">Shop Now</button>
+            </div>
+            <div class="product-card">
+                <img src="{{url_for('static',filename='ktoy.jpg')}}" alt="Nathdwara Painting">
+                <h3>Channapatana Wooden Toy</h3>
+                <p>Price: Rs. 920</p>
+                <p>Rating: 4.5/5</p>
+                <p>The craft is believed to have been encouraged by Tipu Sultan,then ruler of Mysore, who invited artisans from Persia to train local craftsmen in the art of toy making.</p>
+                <button class="shop-now">Shop Now</button>
+            </div>
+            <div class="product-card">
+                <img src="{{url_for('static',filename='bidar.jpg')}}" alt="Dhurrie Carpet">
+                <h3>Bidriware Silver Inlay Persian Jug</h3>
+                <p>Price: Rs. 1,499</p>
+                <p>Rating: 4.5/5</p>
+                <p>There are craftsmen in this art practice who took this practice to nationaland international rcognition.</p>
+                <button class="shop-now">Shop Now</button>
+            </div>
+            <div class="product-card">
+                <img src="{{url_for('static',filename='banjara.jpg')}}" alt="Maroon Sandals">
+                <h3>Banjara Handicrafts</h3>
+                <p>Price: Rs. 599</p>
+                <p>Rating: 4.3/5</p>
+                <p>The semi-nomadic tribes of Banjara are regarded as the patrons of this craft. The women make vivid patch work quilts abound in geometric patterns.</p>
+                <button class="shop-now">Shop Now</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Indiefy. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script type="text/javaScript" src="url_for('static',filename='karnataka.js')"></script>
+    <script src="https://bot.orimon.ai/deploy/index.js" tenantId="c4d47d5f-432e-429b-b88d-697ec7fb6869"></script>
+    
+</body>
+
+</html>

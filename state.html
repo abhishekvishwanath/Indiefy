@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indiefy - Discover the Art of India</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='state.css')}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
+<link rel="icon" href="{{url_for('static',filename='logo-removebg-preview-modified.png')}}" type="image/png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header style="background-color: #C89B9B;">
+        <div  class="navbar">
+            <div class="logo">
+                <img id="logo1" src="{{url_for('static',filename='logo-removebg-preview-modified.png')}}" style="height: 30px;width: 30px;" alt="Indiefy Logo" class="logo-img"> <!-- Replace with actual logo path -->
+                <span><b style="color: #78181B;">Indiefy</b></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="{{url_for('homepage')}}">Shop</a></li>
+                    <li><a href="{{url_for('blog')}}">Blog</a></li>
+                    <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div><div id="google_translate_element"></div>
+
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({
+                        pageLanguage: 'en',
+                        includedLanguages: 'kn,hi,ml,te',
+                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                    }, 'google_translate_element');
+                }
+            </script></div>
+            <div class="icons">
+                <a href="{{url_for('login')}}" ><i class="fa-solid fa-user"></i></a> <!-- Replace with actual user icon path -->
+                <a href="{{url_for('cart')}}" style="margin-left: 20px;"><i class="fa-solid fa-cart-shopping"></i></a> <!-- Replace with actual cart icon path -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero-section">
+            <div class="hero-text" >
+                <h1>Discover the Art of India</h1>
+                <span style="background-color: #C8AF91;">Explore the diverse cultural heritage of India.</span><br><br>
+                <span style="background-color: #C8AF91;">Search by state to uncover the rich traditions, famous cultural practices, and artisanal products that each region is known for. Whether it's the vibrant textiles of Gujarat, the intricate woodwork of Kashmir, or the delicate pottery of Rajasthan, our platform brings the essence of India's craftsmanship to your fingertips.</span><br><br>
+                <span style="background-color: #C8AF91;">Dive into the cultural wealth of India and connect with the artisans who keep these traditions alive. Explore, discover, and celebrate the unique artistry that makes each state special.</span><br><br>
+            </head>
+            <body style="background-color:white;">
+                 <div class="dropdown">
+                    <button class="dropdown-button"
+                            onclick="toggleDropdown()">Select State▼
+            
+                    </button>
+                    <div id="dropdownItems" > 
+                        <input type="text" style="background-color: transparent;" 
+                               id="dropdownSearch" 
+                               placeholder="Search...">
+                               <a href="{{url_for('karnataka')}}"><div  class="dropdown-item">Karnataka</div></a>
+                       
+                        <a href="{{url_for('rajasthan')}}"><div class="dropdown-item">Rajasthan</div></a>
+                        
+                        <a href="#"> <div class="dropdown-item">Haryana</div></a>
+
+
+                        
+            
+                    </div>
+                </div>
+            
+            </div>
+            
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Indiefy. All Rights Reserved.</p>
+    </footer>
+
+    <script type="text/javascript" src="{{url_for('static',filename='state.js')}}"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="https://bot.orimon.ai/deploy/index.js" tenantId="c4d47d5f-432e-429b-b88d-697ec7fb6869"></script>
+    
+</body>
+</html>
+

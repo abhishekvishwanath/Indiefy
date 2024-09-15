@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indiefy - Go Desi</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='about.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="icon" href="{{url_for('static',filename='logo-removebg-preview-modified.png')}}" type="image/png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header Section -->
+    <header style="background-color: #C89B9B;">
+        <div  class="navbar">
+            <div class="logo">
+                <img id="logo1" src="{{url_for('static',filename='logo-removebg-preview-modified.png')}}" alt="Indiefy Logo" class="logo-img"> <!-- Replace with actual logo path -->
+                <span><b style="color: #78181B;">Indiefy</b></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{url_for('homepage')}}"></a>Home</li>
+                    <li><a href="{{url_for('aboutus')}}" style="text-decoration: underline;color: #78181B;">About Us</a></li>
+                    <li><a href="{{url_for('index')}}">Shop</a></li>
+                    <li><a href="{{url_for('blog')}}">Blog</a></li>
+                    <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+                    
+                </ul>
+            </nav>
+            <div><div id="google_translate_element"></div>
+
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({
+                        pageLanguage: 'en',
+                        includedLanguages: 'kn,hi',
+                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                    }, 'google_translate_element');
+                }
+            </script></div>
+            <div class="icons">
+                <a href="{{url_for('login')}}" ><i class="fa-solid fa-user" class="icons"></i></a> <!-- Replace with actual user icon path -->
+                <a href="{{url_for('cart')}}" style="margin-left: 20px;"><i class="fa-solid fa-cart-shopping"></i></a> <!-- Replace with actual cart icon path -->
+            </div>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-content">
+                <h1>About Us</h1>
+                
+                <!-- First row: Image on left, text on right -->
+                <div class="content-row">
+                    <div class="image-container">
+                        <img src="{{url_for('static',filename='aboutus1.jpeg')}}" alt="Peacock Image">
+                    </div>
+                    <div class="text-container">
+                        <p>
+                            <b>Indiefy: Rooted in Tradition, Blossoming with Artistry.</b><br>
+
+Just like a tree stands tall and beautiful through all its seasons—whether in full bloom or shedding its leaves—what holds it steady is its roots. For a country as vast and diverse as India, the strength of its roots lies in its rich culture and heritage, which have withstood the tests of time, providing a foundation through every storm and sunshine.
+
+While modernity has transformed many aspects of our lives—from traditional dhotis to denim jeans, from exquisite Pattachitra paintings to iPad digital art, and from earthen pots to high-tech gadgets—the heart of India still beats in the craftsmanship and livelihood of those who never let go of their cultural identity.
+
+In a world where connections are made through routers, Indiefy seeks to connect you to something deeper: the roots of India. This mission is what gave birth to our passionate team, The Rooters, as we dig even deeper to unearth the beauty and authenticity of India’s artisans.
+
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Second row: Text on left, image on right -->
+                <div class="content-row reverse">
+                    <div class="text-container">
+                        <p>
+                            The artisans we work with are not part of large, well-known production houses. Instead, we collaborate with the street-side craftsmen—those whose talents are often overlooked, whose dedication to their craft remains unwavering. Indiefy serves as the bridge between these remarkable artisans and you, their global audience. Whether they are your neighbors or live miles away in distant regions, we bring their creations right to your doorstep. Some may not even appear on Google Maps, having neither a formal shop nor a digital presence—but through Indiefy, their talents are showcased and celebrated.
+
+With the valuable support of NGOs and local communities, we’ve reached the hidden corners of cities and villages, discovering artisans eager to share their work with the world. Our state-wise filter allows you to explore the unique heritage of each region, offering a glimpse into the exclusive traditions that are deeply rooted in the culture of each state.
+
+Every product you purchase through Indiefy makes a real difference in an artisan’s life, and we’re committed to showing you the impact of your contribution. Our blogs share not only the journeys and challenges these artisans face but also the incredible work our partner NGOs and volunteers are doing to uplift them. And with our regional language options, you can discover and celebrate your heritage in your own language, no matter where you are in the world.
+                        </p>
+                    </div>
+                    <div class="image-container">
+                        <img src="{{url_for('static',filename='aboutus2.jpeg')}}" alt="Village Image">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div ></div>
+        
+    <div class="credit-container">
+        <p style="text-align: center;">
+            <strong>The Rooters</strong>
+        </p>
+
+        <div class="image-gallery">
+            <!-- First row -->
+            <div class="row" style="display: flex; justify-content: space-around; margin-top: 10px;">
+                <div class="team-member">
+                    <img src="{{url_for('static',filename='sat.jpeg')}}" alt="Team Member 1"  />
+                    <p class="name">Sathwik Shetty</p>
+                </div>
+                <div class="team-member">
+                    <img src="{{url_for('static',filename='js.jpeg')}}" alt="Team Member 2" />
+                    <p class="name">Jaya Siddartha</p>
+                </div>
+                <div class="team-member">
+                    <img src="{{url_for('static',filename='mk.jpeg')}}" alt="Team Member 3" />
+                    <p class="name">Madhan Kumar R</p>
+                </div>
+            </div>
+            <!-- Second row -->
+            <div class="row" style="display: flex; justify-content: space-around; margin-top: 10px; margin-bottom: 10px;">
+                <div class="team-member">
+                    <img src="{{url_for('static',filename='av.jpeg')}}" alt="Team Member 4" />
+                    <p class="name">Abhishek  vishwanath</p>
+                </div>
+                <div class="team-member">
+                    <img src="{{url_for('static',filename='neha.jpeg')}}" alt="Team Member 5" />
+                    <p class="name">Neha P N</p>
+                </div>
+                <div class="team-member">
+                    <img src="{{url_for('static',filename='abhi.jpeg')}}" alt="Team Member 6" />
+                    <p class="name">Abhinand Prameesh</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Indiefy. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://bot.orimon.ai/deploy/index.js" tenantId="c4d47d5f-432e-429b-b88d-697ec7fb6869"></script>
+        
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+</body>
+
+</html>
