@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-image: url('/static/bg3.jpg');
+}
+/* Header styles */
+header {
+    background-color: #d9b7a7;
+    padding: 15px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 30px; /* Adjust logo size */
+    margin-right: 10px;
+}
+
+.navbar nav ul {
+    display: flex;
+}
+.navbar nav ul :hover{
+    color: #78181B;
+}
+
+.navbar nav ul li {
+    margin: 0 20px;
+    
+}
+
+.navbar nav ul li a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.icons a img {
+    width: 24px;
+    margin-left: 20px;
+    transition: background-color 0.3s ease;
+}
+
+h1 {
+    text-align: center;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.product-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 250px;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+body, h1, h2, p, ul, li, a, button {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button:hover, a:hover {
+    background-color: #78181B38;
+}
+.image {
+    /* Gradient background */
+    background-image: url('/static/up2.jpg');
+        background-size: cover;
+}

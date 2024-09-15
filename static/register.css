@@ -1,0 +1,49 @@
+
+.image {
+    /* Gradient background */
+    background-image: url('/static/up2.jpg');
+        background-size: cover;
+}
+
+.gradient-form {
+    background-color: #eee;
+    height: 80vh; /* Further reduce the height */
+}
+
+.container {
+    max-width: 600px; /* Slightly narrower container */
+    /* Reduce top padding */
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
+
+
+.text-center img {
+    width: 120px; /* Smaller logo */
+}
+
+.btn {
+    padding: 5px 15px ; /* Smaller buttons */
+    font-size: 14px; 
+    transition: background-color 0.3s ease;
+   /* Smaller font for buttons */
+}
+.btn:hover {
+    background-color: #ff001e;
+}
+h4, p {
+    font-size: 14px; /* Smaller headings and text */
+}
+
+@media (max-width: 768px) {
+   
+    .col-lg-6 {
+        flex: 0 0 100%; /* Stacks elements vertically on smaller screens */
+        max-width: 100%;
+    }
+    
+}

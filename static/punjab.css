@@ -1,0 +1,201 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#e8d8bf;
+    
+  }
+  
+  /* Header styles */
+  /* styles.css */
+  
+  /* Reset some default styles */
+  body, h1, h2, p, ul, li, a, button {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #E1CBAA;
+    color: #4a2f2a;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #d9b7a7;
+    padding: 15px 20px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    width: 40px; /* Adjust logo size */
+    margin-right: 10px;
+  }
+  
+  .navbar nav ul {
+    display: flex;
+  }
+  .navbar nav ul :hover{
+    color: #78181B;
+  }
+  
+  .navbar nav ul li {
+    margin: 0 20px;
+    
+  }
+  
+  .navbar nav ul li a {
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .icons a img {
+    width: 24px;
+    margin-left: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  /* Hero section */
+  .hero-section {
+    background-image: url('./indie/punjab.jpg'); /* Add your background image */
+    background-size: cover;
+    background-position: center;
+    background-color: #E1CBAA;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff; /* Default text color */
+    position: relative;
+  }
+  
+  .hero-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    background-color: #E1CBAA; /* Add a semi-transparent background to the box */
+    display: inline-block; /* Make the background fit the text width */
+    padding: 10px 20px;
+    /* Add a border to create the box effect */
+    border-radius: 10px; /* Optional: add rounded corners */
+    color: #333; /* Default text color inside the box */
+  }
+  
+  .hero-section h1 .rajasthan-text {
+    color: #933; /* Make the "Rajasthan" text red */
+  }
+  
+  .hero-section p {
+    font-size: 18px;
+    color: #ddd; /* Paragraph text color */
+  }
+  
+  
+  /* Products section with overlap */
+  .products {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: -80px; /* Pull the products up to overlap with the hero section */
+    position: relative;
+    z-index: 1;
+    
+  }
+  
+  .product-card {
+    background-color:#c8af91;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 220px; /* Set equal width for all cards */
+    margin: 15px;
+    text-align: center;
+    z-index: 2; /* Ensure the product cards are above the hero section */
+  }
+  
+  .product-card img {
+    width: 100%; /* Ensure images fill the card */
+    height: 200px; /* Set a fixed height for consistency */
+    object-fit: cover; /* Ensure images don't stretch */
+    border-radius: 8px;
+  }
+  
+  .product-card h3 {
+    font-size: 20px;
+    margin: 15px 0;
+  }
+  
+  .product-card p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  .shop-now {
+    background-color: #933;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .shop-now:hover {
+    background-color: #c45;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #78181B;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+  }
+  
+  /* Media query for mobile navigation */
+  @media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+  
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+  
+    .nav-links.show {
+        display: flex;
+    }
+  
+    .menu-toggle {
+        display: block;
+        margin-right: 20px;
+    }
+  
+    .product-card {
+        width: 100%; /* Make product cards full width in mobile view */
+    }
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+  

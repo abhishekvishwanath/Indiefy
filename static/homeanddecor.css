@@ -1,0 +1,149 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li, a, button {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f2e9;
+  color: #4a2f2a;
+}
+
+/* Header styles */
+header {
+  background-color: #d9b7a7;
+  padding: 15px 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.navbar nav ul {
+  display: flex;
+}
+.navbar nav ul :hover{
+  color: #78181B;
+}
+
+.navbar nav ul li {
+  margin: 0 20px;
+  
+}
+
+.navbar nav ul li a {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.icons a img {
+  width: 24px;
+  margin-left: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-section {
+  background-image: url('./indie/up2-safeimagekit.jpeg');
+  height: 80px; /* Sets the height to fit the entire viewport height */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Adds space around the content inside the hero section */
+  box-sizing: border-box; /* Ensures padding is included in the total height and width */
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  color: #a34229;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.products {
+  display: inline-flex;
+  justify-content: space-around;
+  margin: 30px;
+}
+
+.product-card {
+  background-color: #E8D8BF;
+  padding: 20px;
+  border-radius: 10px;
+  height: 380px;
+  width: 25%;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  font-size: 24px;
+  margin: 5px 0;
+  color: #a34229;
+}
+
+.product-card p {
+  font-size: 16px;
+  color: #5a3b30;
+  margin-bottom: 5px;
+}
+
+.shop-now {
+  background-color: #a34229;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.shop-now:hover {
+  background-color: #f59563;
+}
+
+footer {
+  background-color: #78181B;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .products {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .product-card {
+      width: 80%;
+      margin-bottom: 30px;
+  }
+}

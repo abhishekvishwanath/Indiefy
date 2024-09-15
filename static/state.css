@@ -1,0 +1,271 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li, a, button {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #78181B;
+    color: #78181B;
+   
+}
+
+
+/* Header styles */
+header {
+    background-color: #d9b7a7;
+    padding: 15px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5px;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 40px; /* Adjust logo size */
+    margin-right: 10px;
+}
+
+.navbar nav ul {
+    display: flex;
+}
+.navbar nav ul :hover{
+    color: #78181B;
+}
+
+.navbar nav ul li {
+    margin: 0 20px;
+    
+}
+
+.navbar nav ul li a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.icons a img {
+    width: 24px;
+    margin-left: 20px;
+    transition: background-color 0.3s ease;
+}
+/* Hero section styles */
+.hero-section {
+    background-image: url('/static/pic4.jpeg'); 
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    padding: 100px 20px;
+    color: ghostwhite;
+    font-size: large;
+    text-align: center;
+    height: 500px;
+}
+
+
+.hero-text h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    
+}
+
+.hero-text p {
+    margin-bottom: 20px;
+    font-size: 18px;
+   
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 1100px;
+    width: 200px;
+}
+
+.dropdown-button {
+    padding: 10px 20px;
+    background-color:#78181B;
+    color: ghostwhite;
+    border: none;
+   border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.dropdown-button .icon {
+    margin-left: 10px;
+}
+
+#dropdownSearch {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+}
+
+#dropdownItems {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    max-height: 200px;
+    overflow-y: auto;
+
+}
+
+.dropdown-item {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #ddd;
+}
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #78181B;
+    color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .hero-text h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .nav-links.nav-active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .user-options {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .navbar {
+        align-items: center;
+    }
+
+    .user-options a img {
+        width: 20px;
+    }
+}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
